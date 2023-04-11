@@ -17,6 +17,10 @@ describe("My Stack", () => {
     const stack = new Stack();
     // We are 'expecting' the top of an initialized stack to be -1.
     expect(stack.top).toBe(-1);
+    /*      expect(stack.top).toBe({})
+    ^ This fails because .toBe checks their memory addresses.
+    Instead of 'toBe' we want to use toEqual. */
+    expect(stack.items).toEqual({});
   });
 
   it.todo("can push onto the top");
