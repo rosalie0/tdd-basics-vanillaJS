@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "test:once": "jest",
-    "test": "jest --watchAll --verbose"
+    "test": "jest --watchAll --verbose --coverage"
   },
   "devDependencies": {
     "@types/jest": "^29.5.0",
