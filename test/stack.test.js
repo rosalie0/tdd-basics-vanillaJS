@@ -1,3 +1,12 @@
+// This is the code we are testing.
+// We are to make a Stack ADT without using arrays.
+class Stack {
+  constructor() {
+    this.top = -1;
+    this.items = {};
+  }
+}
+
 // This is a test suite.
 describe("My Stack", () => {
   // This is a singular test in this suite, with the string being a description of it.
