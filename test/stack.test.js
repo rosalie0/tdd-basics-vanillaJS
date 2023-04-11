@@ -15,7 +15,12 @@ class Stack {
     this.items[this.top] = element;
   }
 
-  //pop(element)
+  pop() {
+    const popped = this.items[this.top]; // store in temp
+    delete this.items[this.top]; // delete the key:value from the object.
+    this.top--; // adjust top
+    return popped; // return temp
+  }
 }
 
 // This is a test suite.
@@ -47,9 +52,10 @@ describe("My Stack", () => {
   });
 
   it("can pop off from the top", () => {
+    stack.push("banana");
     const popped = stack.pop();
 
-    expect(popped).toBe("avocado");
+    expect(popped).toBe("banana");
     expect(stack.top).toBe(-1);
     expect(stack.items).toEqual({});
   });
