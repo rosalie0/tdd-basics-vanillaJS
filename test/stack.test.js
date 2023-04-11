@@ -9,12 +9,18 @@ class Stack {
 
 // This is a test suite.
 describe("My Stack", () => {
+  // Write code that all these tests have scope into.
+  let stack;
+  beforeEach(() => {
+    // re-initialize stack to an empty stack before each test.
+    // reduces the amount of dupe code.
+    stack = new Stack();
+  });
+
   // This is a singular test in this suite, with the string being a description of it.
   // The 2nd arg is the function it runs.
   // You can write it.todo if you've not written the test yet.
-
   it("is created empty", () => {
-    const stack = new Stack();
     // We are 'expecting' the top of an initialized stack to be -1.
     expect(stack.top).toBe(-1);
     /*      expect(stack.top).toBe({})
@@ -23,7 +29,11 @@ describe("My Stack", () => {
     expect(stack.items).toEqual({});
   });
 
-  it.todo("can push onto the top");
+  it("can push onto the top", () => {
+    stack.push("avocado");
+    expect(stack.top).toBe(0);
+    expect(stack.items).toBe("avocado");
+  });
 
   it.todo("can pop off from the top");
 });
