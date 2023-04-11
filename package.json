@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:once": "jest",
+    "test": "jest --watchAll --verbose"
   },
   "devDependencies": {
     "vite": "^4.2.0"
