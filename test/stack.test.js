@@ -5,6 +5,15 @@ class Stack {
     this.top = -1;
     this.items = {};
   }
+
+  get peek() {
+    return this.items[this.top];
+  }
+
+  push(element) {
+    this.top++;
+    this.items[this.top] = element;
+  }
 }
 
 // This is a test suite.
@@ -32,7 +41,7 @@ describe("My Stack", () => {
   it("can push onto the top", () => {
     stack.push("avocado");
     expect(stack.top).toBe(0);
-    expect(stack.items).toBe("avocado");
+    expect(stack.peek).toBe("avocado");
   });
 
   it.todo("can pop off from the top");
