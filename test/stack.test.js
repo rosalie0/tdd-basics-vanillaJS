@@ -14,6 +14,8 @@ class Stack {
     this.top++;
     this.items[this.top] = element;
   }
+
+  //pop(element)
 }
 
 // This is a test suite.
@@ -44,5 +46,11 @@ describe("My Stack", () => {
     expect(stack.peek).toBe("avocado");
   });
 
-  it.todo("can pop off from the top");
+  it("can pop off from the top", () => {
+    const popped = stack.pop();
+
+    expect(popped).toBe("avocado");
+    expect(stack.top).toBe(-1);
+    expect(stack.items).toEqual({});
+  });
 });
